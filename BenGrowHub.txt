@@ -53,13 +53,17 @@ dropdown.TextSize = 15
 dropdown.TextColor3 = Color3.new(1, 1, 1)
 Instance.new("UICorner", dropdown).CornerRadius = UDim.new(0, 6)
 
-local dropdownList = Instance.new("Frame", mainFrame)
-dropdownList.Size = UDim2.new(0.8, 0, 0, #validPets * 26)
+-- Dropdown List (scrollable)
+local dropdownList = Instance.new("ScrollingFrame", mainFrame)
+dropdownList.Size = UDim2.new(0.8, 0, 0, 150) -- fixed visible height
 dropdownList.Position = dropdown.Position + UDim2.new(0, 0, 0, 30)
 dropdownList.AnchorPoint = Vector2.new(0.5, 0)
 dropdownList.BackgroundColor3 = Color3.fromRGB(40, 0, 60)
 dropdownList.Visible = false
 dropdownList.ZIndex = 2
+dropdownList.CanvasSize = UDim2.new(0, 0, 0, #validPets * 26) -- scroll range
+dropdownList.ScrollBarThickness = 6
+dropdownList.ClipsDescendants = true
 Instance.new("UICorner", dropdownList).CornerRadius = UDim.new(0, 6)
 
 local layout = Instance.new("UIListLayout", dropdownList)
