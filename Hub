@@ -12,7 +12,8 @@ end
 -- Valid Pets
 local validPets = {
 	"Raccoon", "Kitsune", "Spinosaurus", "Disco Bee",
-	"T-Rex", "Butterfly", "Dragonfly", "Fennec Fox"
+	"T-Rex", "Butterfly", "Dragonfly", "Fennec Fox",
+	"Giant Ant"
 }
 
 -- GUI Setup
